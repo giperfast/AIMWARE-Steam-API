@@ -12,24 +12,24 @@ ffi.cdef[[
 		void* steam_remotestorage;
 		void* steam_screenshots;
 		void* steam_http;
-        void* steam_unidentifiedmessages;
-        void* steam_controller;
-        void* steam_ugc;
-        void* steam_applist;
-        void* steam_music;
-        void* steam_musicremote;
-        void* steam_htmlsurface;
-        void* steam_inventory;
-        void* steam_video;
-    } steam_api_ctx_t;
-    typedef unsigned char uint8;
-    typedef uint16_t uint16;
-    typedef uint32_t uint32;
-    typedef uint64_t uint64;
-    typedef signed char int8;
-    typedef int16_t int16;
-    typedef int32_t int32;
-    typedef int64_t int64;
+		void* steam_unidentifiedmessages;
+		void* steam_controller;
+		void* steam_ugc;
+		void* steam_applist;
+		void* steam_music;
+		void* steam_musicremote;
+		void* steam_htmlsurface;
+		void* steam_inventory;
+		void* steam_video;
+	} steam_api_ctx_t;
+	typedef unsigned char uint8;
+    	typedef uint16_t uint16;
+    	typedef uint32_t uint32;
+    	typedef uint64_t uint64;
+    	typedef signed char int8;
+    	typedef int16_t int16;
+    	typedef int32_t int32;
+    	typedef int64_t int64;
 	typedef int EUniverse;
 	typedef int ENotificationPosition;
 	typedef int ESteamAPICallFailure;
@@ -142,72 +142,72 @@ ffi.cdef[[
 	typedef void* ISteamParentalSettings;
 	typedef void* ISteamInput;
 	typedef void* ISteamParties;
-    typedef void (__cdecl *SteamAPIWarningMessageHook_t)(int, const char *);
-    typedef struct _MatchMakingKeyValuePair_t {
-        char m_szKey[ 256 ];
-        char m_szValue[ 256 ];
-    } MatchMakingKeyValuePair_t;
-    typedef struct _FriendGameInfo_t {
-    	CGameID m_gameID;
-    	uint32 m_unGameIP;
-    	uint16 m_usGamePort;
-    	uint16 m_usQueryPort;
-    	CSteamID m_steamIDLobby;
-    } FriendGameInfo_t;
-    typedef struct _P2PSessionState_t {
-    	uint8 m_bConnectionActive;		
-    	uint8 m_bConnecting;			
-    	uint8 m_eP2PSessionError;		
-    	uint8 m_bUsingRelay;			
-    	int32 m_nBytesQueuedForSend;
-    	int32 m_nPacketsQueuedForSend;
-    	uint32 m_nRemoteIP;				
-    	uint16 m_nRemotePort;			
-    } P2PSessionState_t;
-    typedef struct _SteamParamStringArray_t {
-        const char ** m_ppStrings;
-        int32 m_nNumStrings;
-    } SteamParamStringArray_t;
-    typedef struct _InputMotionData_t {
-    	float rotQuatX;
-    	float rotQuatY;
-    	float rotQuatZ;
-    	float rotQuatW;
-    	float posAccelX;
-    	float posAccelY;
-    	float posAccelZ;
-    	float rotVelX;
-    	float rotVelY;
-    	float rotVelZ;
-    } InputMotionData_t;
-    typedef InputMotionData_t ControllerMotionData_t;
-    typedef struct _SteamUGCDetails_t {
-        PublishedFileId_t m_nPublishedFileId;
-        EResult m_eResult;
-        EWorkshopFileType m_eFileType;
-        AppId_t m_nCreatorAppID;
-        AppId_t m_nConsumerAppID;
-        char m_rgchTitle[129];
-        char m_rgchDescription[8000];
-        uint64 m_ulSteamIDOwner;
-        uint32 m_rtimeCreated;
-        uint32 m_rtimeUpdated;
-        uint32 m_rtimeAddedToUserList;
-        ERemoteStoragePublishedFileVisibility m_eVisibility;
-        bool m_bBanned;
-        bool m_bAcceptedForUse;
-        bool m_bTagsTruncated;
-        char m_rgchTags[1025];
-        UGCHandle_t m_hFile;
-        UGCHandle_t m_hPreviewFile;
-        char m_pchFileName[260];
-        int32 m_nFileSize;
-        int32 m_nPreviewFileSize;
-        char m_rgchURL[256];
-        uint32 m_unVotesUp;
-        uint32 m_unVotesDown;
-        float m_flScore;
-        uint32 m_unNumChildren;
+    	typedef void (__cdecl *SteamAPIWarningMessageHook_t)(int, const char *);
+    	typedef struct _MatchMakingKeyValuePair_t {
+        	char m_szKey[ 256 ];
+        	char m_szValue[ 256 ];
+    	} MatchMakingKeyValuePair_t;
+    	typedef struct _FriendGameInfo_t {
+    		CGameID m_gameID;
+		uint32 m_unGameIP;
+		uint16 m_usGamePort;
+		uint16 m_usQueryPort;
+		CSteamID m_steamIDLobby;
+    	} FriendGameInfo_t;
+	typedef struct _P2PSessionState_t {
+		uint8 m_bConnectionActive;		
+		uint8 m_bConnecting;			
+		uint8 m_eP2PSessionError;		
+		uint8 m_bUsingRelay;			
+		int32 m_nBytesQueuedForSend;
+		int32 m_nPacketsQueuedForSend;
+		uint32 m_nRemoteIP;				
+		uint16 m_nRemotePort;			
+	} P2PSessionState_t;
+    	typedef struct _SteamParamStringArray_t {
+        	const char ** m_ppStrings;
+        	int32 m_nNumStrings;
+    	} SteamParamStringArray_t;
+	typedef struct _InputMotionData_t {
+		float rotQuatX;
+		float rotQuatY;
+		float rotQuatZ;
+		float rotQuatW;
+		float posAccelX;
+		float posAccelY;
+		float posAccelZ;
+		float rotVelX;
+		float rotVelY;
+		float rotVelZ;
+	} InputMotionData_t;
+    	typedef InputMotionData_t ControllerMotionData_t;
+    	typedef struct _SteamUGCDetails_t {
+		PublishedFileId_t m_nPublishedFileId;
+		EResult m_eResult;
+		EWorkshopFileType m_eFileType;
+		AppId_t m_nCreatorAppID;
+		AppId_t m_nConsumerAppID;
+		char m_rgchTitle[129];
+		char m_rgchDescription[8000];
+		uint64 m_ulSteamIDOwner;
+		uint32 m_rtimeCreated;
+		uint32 m_rtimeUpdated;
+		uint32 m_rtimeAddedToUserList;
+		ERemoteStoragePublishedFileVisibility m_eVisibility;
+		bool m_bBanned;
+		bool m_bAcceptedForUse;
+		bool m_bTagsTruncated;
+		char m_rgchTags[1025];
+		UGCHandle_t m_hFile;
+		UGCHandle_t m_hPreviewFile;
+		char m_pchFileName[260];
+		int32 m_nFileSize;
+		int32 m_nPreviewFileSize;
+		char m_rgchURL[256];
+		uint32 m_unVotesUp;
+		uint32 m_unVotesDown;
+		float m_flScore;
+		uint32 m_unNumChildren;
 	} SteamUGCDetails_t;
 	typedef struct _LeaderboardEntry_t {
 		CSteamID m_steamIDUser;
@@ -314,61 +314,61 @@ end
 local steam_api = helper.FindPattern("client.dll", "FF 15 ?? ?? ?? ?? B9 ?? ?? ?? ?? E8 ?? ?? ?? ?? 6A", "steam_api_ctx_t**", 7)[0]
 
 local class = {
-    steam_client = helper.GetClass(steam_api.steam_client),
-    steam_utils = helper.GetClass(steam_api.steam_utils),
-    steam_matchmaking = helper.GetClass(steam_api.steam_matchmaking),
-    steam_user = helper.GetClass(steam_api.steam_user),
-    steam_user_stats = helper.GetClass(steam_api.steam_user_stats),
-    steam_friends = helper.GetClass(steam_api.steam_friends),
-    steam_apps = helper.GetClass(steam_api.steam_apps),
-    steam_matchmakingservers = helper.GetClass(steam_api.steam_matchmakingservers),
-    steam_networking = helper.GetClass(steam_api.steam_networking),
-    steam_remotestorage = helper.GetClass(steam_api.steam_remotestorage),
-    steam_screenshots = helper.GetClass(steam_api.steam_screenshots),
-    steam_http = helper.GetClass(steam_api.steam_http),
-    steam_controller = helper.GetClass(steam_api.steam_controller),
-    steam_ugc = helper.GetClass(steam_api.steam_ugc),
-    steam_applist = helper.GetClass(steam_api.steam_applist),
-    steam_music = helper.GetClass(steam_api.steam_music),
-    steam_musicremote = helper.GetClass(steam_api.steam_musicremote),
-    steam_htmlsurface = helper.GetClass(steam_api.steam_htmlsurface),
-    steam_inventory = helper.GetClass(steam_api.steam_inventory),
-    steam_video = helper.GetClass(steam_api.steam_video),
+	steam_client = helper.GetClass(steam_api.steam_client),
+	steam_utils = helper.GetClass(steam_api.steam_utils),
+	steam_matchmaking = helper.GetClass(steam_api.steam_matchmaking),
+	steam_user = helper.GetClass(steam_api.steam_user),
+	steam_user_stats = helper.GetClass(steam_api.steam_user_stats),
+	steam_friends = helper.GetClass(steam_api.steam_friends),
+	steam_apps = helper.GetClass(steam_api.steam_apps),
+	steam_matchmakingservers = helper.GetClass(steam_api.steam_matchmakingservers),
+	steam_networking = helper.GetClass(steam_api.steam_networking),
+	steam_remotestorage = helper.GetClass(steam_api.steam_remotestorage),
+	steam_screenshots = helper.GetClass(steam_api.steam_screenshots),
+	steam_http = helper.GetClass(steam_api.steam_http),
+	steam_controller = helper.GetClass(steam_api.steam_controller),
+	steam_ugc = helper.GetClass(steam_api.steam_ugc),
+	steam_applist = helper.GetClass(steam_api.steam_applist),
+	steam_music = helper.GetClass(steam_api.steam_music),
+	steam_musicremote = helper.GetClass(steam_api.steam_musicremote),
+	steam_htmlsurface = helper.GetClass(steam_api.steam_htmlsurface),
+	steam_inventory = helper.GetClass(steam_api.steam_inventory),
+	steam_video = helper.GetClass(steam_api.steam_video),
 }
 ISteamClient =  {
-    CreateSteamPipe = class.steam_client:GetVFunction(0, "HSteamPipe(__thiscall*)(void*)"),
-    BReleaseSteamPipe = class.steam_client:GetVFunction(1, "bool(__thiscall*)(void*, HSteamPipe)"),
-    ConnectToGlobalUser = class.steam_client:GetVFunction(2, "HSteamUser(__thiscall*)(void*, HSteamPipe)"),
-    CreateLocalUser = class.steam_client:GetVFunction(3, "HSteamUser(__thiscall*)(void*, HSteamPipe*, EAccountType)"),
-    ReleaseUser = class.steam_client:GetVFunction(4, "void(__thiscall*)(void*, HSteamPipe, HSteamUser)"),
-    GetISteamUser = class.steam_client:GetVFunction(5, "ISteamUser*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamGameServer = class.steam_client:GetVFunction(6, "ISteamGameServer*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    SetLocalIPBinding = class.steam_client:GetVFunction(7, "void(__thiscall*)(void*, uint32, uint16)"),
+	CreateSteamPipe = class.steam_client:GetVFunction(0, "HSteamPipe(__thiscall*)(void*)"),
+	BReleaseSteamPipe = class.steam_client:GetVFunction(1, "bool(__thiscall*)(void*, HSteamPipe)"),
+	ConnectToGlobalUser = class.steam_client:GetVFunction(2, "HSteamUser(__thiscall*)(void*, HSteamPipe)"),
+	CreateLocalUser = class.steam_client:GetVFunction(3, "HSteamUser(__thiscall*)(void*, HSteamPipe*, EAccountType)"),
+	ReleaseUser = class.steam_client:GetVFunction(4, "void(__thiscall*)(void*, HSteamPipe, HSteamUser)"),
+	GetISteamUser = class.steam_client:GetVFunction(5, "ISteamUser*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamGameServer = class.steam_client:GetVFunction(6, "ISteamGameServer*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	SetLocalIPBinding = class.steam_client:GetVFunction(7, "void(__thiscall*)(void*, uint32, uint16)"),
 	GetISteamFriends = class.steam_client:GetVFunction(8, "ISteamFriends*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
 	GetISteamUtils = class.steam_client:GetVFunction(9, "ISteamUtils*(__thiscall*)(void*, HSteamPipe, const char*)"),
-    GetISteamMatchmaking = class.steam_client:GetVFunction(10, "ISteamMatchmaking*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamMatchmakingServers = class.steam_client:GetVFunction(11, "ISteamMatchmakingServers*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamGenericInterface = class.steam_client:GetVFunction(12, "void*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamUserStats = class.steam_client:GetVFunction(13, "ISteamUserStats*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamGameServerStats = class.steam_client:GetVFunction(14, "ISteamGameServerStats*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamApps = class.steam_client:GetVFunction(15, "ISteamApps*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamNetworking = class.steam_client:GetVFunction(16, "ISteamNetworking*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamRemoteStorage = class.steam_client:GetVFunction(17, "ISteamRemoteStorage*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamScreenshots = class.steam_client:GetVFunction(18, "ISteamScreenshots*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamGameSearch = class.steam_client:GetVFunction(19, "ISteamGameSearch*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetIPCCallCount = class.steam_client:GetVFunction(20, "uint32(__thiscall*)(void*)"),
-    SetWarningMessageHook = class.steam_client:GetVFunction(21, "void(__thiscall*)(void*, SteamAPIWarningMessageHook_t)"),
-    BShutdownIfAllPipesClosed = class.steam_client:GetVFunction(22, "bool(__thiscall*)(void*)"),
-    GetISteamHTTP = class.steam_client:GetVFunction(23, "ISteamHTTP*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamController = class.steam_client:GetVFunction(24, "ISteamController*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamUGC = class.steam_client:GetVFunction(25, "ISteamUGC*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamAppList = class.steam_client:GetVFunction(26, "ISteamAppList*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamMatchmaking = class.steam_client:GetVFunction(10, "ISteamMatchmaking*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamMatchmakingServers = class.steam_client:GetVFunction(11, "ISteamMatchmakingServers*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamGenericInterface = class.steam_client:GetVFunction(12, "void*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamUserStats = class.steam_client:GetVFunction(13, "ISteamUserStats*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamGameServerStats = class.steam_client:GetVFunction(14, "ISteamGameServerStats*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamApps = class.steam_client:GetVFunction(15, "ISteamApps*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamNetworking = class.steam_client:GetVFunction(16, "ISteamNetworking*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamRemoteStorage = class.steam_client:GetVFunction(17, "ISteamRemoteStorage*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamScreenshots = class.steam_client:GetVFunction(18, "ISteamScreenshots*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamGameSearch = class.steam_client:GetVFunction(19, "ISteamGameSearch*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetIPCCallCount = class.steam_client:GetVFunction(20, "uint32(__thiscall*)(void*)"),
+	SetWarningMessageHook = class.steam_client:GetVFunction(21, "void(__thiscall*)(void*, SteamAPIWarningMessageHook_t)"),
+	BShutdownIfAllPipesClosed = class.steam_client:GetVFunction(22, "bool(__thiscall*)(void*)"),
+	GetISteamHTTP = class.steam_client:GetVFunction(23, "ISteamHTTP*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamController = class.steam_client:GetVFunction(24, "ISteamController*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamUGC = class.steam_client:GetVFunction(25, "ISteamUGC*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamAppList = class.steam_client:GetVFunction(26, "ISteamAppList*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
 	GetISteamMusic = class.steam_client:GetVFunction(27, "ISteamMusic*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamMusicRemote = class.steam_client:GetVFunction(28, "ISteamMusicRemote*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamHTMLSurface = class.steam_client:GetVFunction(29, "ISteamHTMLSurface*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamMusicRemote = class.steam_client:GetVFunction(28, "ISteamMusicRemote*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamHTMLSurface = class.steam_client:GetVFunction(29, "ISteamHTMLSurface*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
 	GetISteamInventory = class.steam_client:GetVFunction(30, "ISteamInventory*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
 	GetISteamVideo = class.steam_client:GetVFunction(31, "ISteamVideo*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
-    GetISteamParentalSettings = class.steam_client:GetVFunction(32, "ISteamParentalSettings*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
+	GetISteamParentalSettings = class.steam_client:GetVFunction(32, "ISteamParentalSettings*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
 	GetISteamInput = class.steam_client:GetVFunction(33, "ISteamInput*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
 	GetISteamParties = class.steam_client:GetVFunction(34, "ISteamParties*(__thiscall*)(void*, HSteamUser, HSteamPipe, const char*)"),
 }
